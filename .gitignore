@@ -53,5 +53,9 @@ app.*.map.json
 /ios/firebase_app_id_file.json
 
 # anything
-.env*
-pubspec.lock*
+.env
+pubspec.lock
+
+# FVM Version Cache
+.fvm/flutter_sdk
+.fvmrc
