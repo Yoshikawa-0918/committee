@@ -49,6 +49,8 @@ app.*.map.json
 /android/app/release
 
 # iOS
+/ios/RunnerTests/
+/ios/Runner/GoogleService-Info.plist
 /ios/Podfile.lock*
 /ios/firebase_app_id_file.json
 
