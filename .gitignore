@@ -48,6 +48,10 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+# iOS
+/ios/Podfile.lock*
+/ios/firebase_app_id_file.json
+
 # anything
 .env*
 pubspec.lock*
