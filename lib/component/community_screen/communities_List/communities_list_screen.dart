@@ -1,4 +1,4 @@
-import 'package:committee/component/community_screen/communities_List/communitiesList.dart';
+import 'package:committee/component/community_screen/communities_List/communities_list.dart';
 import 'package:flutter/material.dart';
 
 class CommunitiesListScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class CommunitiesListScreen extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              color: Colors.red,
+              color: const Color.fromARGB(31, 199, 9, 9),
               child: Column(
                 children: [
                   const SizedBox(height: 12),

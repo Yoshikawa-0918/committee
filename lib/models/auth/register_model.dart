@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:committee/component/home_screen_widget/profile_image_selector.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:profile_image_selector/profile_image_selector.dart';
 
 class RegisterModel {
   String? email;
@@ -90,7 +90,7 @@ class RegisterModel {
     //Firebase Storageに画像をアップロードする
     if (userImage.imageFile != null) {
       final Reference storageRef = FirebaseStorage.instance.ref();
-      final Reference communityImageRef = storageRef.child("$name.png");
+      final Reference communityImageRef = storageRef.child("user/$name.png");
       final File file = File(userImage.imageFile!.path);
       try {
         await communityImageRef.putFile(file);

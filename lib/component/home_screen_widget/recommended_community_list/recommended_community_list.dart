@@ -1,4 +1,4 @@
-import 'package:committee/component/home_screen_widget/recommended_community_list/recommendedCommunity_item.dart';
+import 'package:committee/component/home_screen_widget/recommended_community_list/recommended_community_item.dart';
 import 'package:committee/models/community.dart';
 import 'package:committee/provider/user_service.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +26,6 @@ class RecommendedCommunityListState
         .then((_) => communities = ref.watch(userServiceProvider).communities);
   }
 
-//
   @override
   void initState() {
     super.initState();

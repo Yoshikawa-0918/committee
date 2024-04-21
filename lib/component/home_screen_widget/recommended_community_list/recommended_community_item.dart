@@ -1,4 +1,4 @@
-import 'package:committee/component/community_screen/community_Detail/communityDetail.dart';
+import 'package:committee/component/community_screen/community_Detail/community_detail.dart';
 import 'package:committee/models/community.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +49,9 @@ class RecommendedCommunityItems extends StatelessWidget {
                       SizedBox(
                         width: size.width / 1.1,
                         height: size.width / 1.1,
-                        child: Image.network(community.picture ?? ""),
+                        child: FittedBox(
+                            fit: BoxFit.contain,
+                            child: Image.network(community.picture ?? "")),
                       )
                     },
                     const SizedBox(width: 10),

@@ -4,8 +4,8 @@ import 'package:committee/models/community.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class belongToCommunityList extends StatelessWidget {
-  const belongToCommunityList({
+class BelongToCommunityList extends StatelessWidget {
+  const BelongToCommunityList({
     Key? key,
   }) : super(key: key);
 
@@ -45,16 +45,16 @@ class belongToCommunityList extends StatelessWidget {
           List<String> representaitive =
               List<String>.from(data['representaitive']);
           return Community(
-            // コミュニティのデータを取得してCommunityオブジェクトに変換
-            // 必要に応じてCommunityモデルのコンストラクタを変更してください
-            circleId: doc.id,
-            name: data['name'],
-            content: data['content'],
-            activityTime: data['activityTime'],
-            location: data['location'],
-            members: members,
-            representative: representaitive,
-          );
+              // コミュニティのデータを取得してCommunityオブジェクトに変換
+              // 必要に応じてCommunityモデルのコンストラクタを変更してください
+              circleId: doc.id,
+              name: data['name'],
+              content: data['content'],
+              activityTime: data['activityTime'],
+              location: data['location'],
+              members: members,
+              representative: representaitive,
+              picture: data["picture"]);
         }).toList();
 
         print(authenticatedUser.uid);
@@ -67,7 +67,7 @@ class belongToCommunityList extends StatelessWidget {
               child: ListView.builder(
                 itemCount: communityList.length,
                 itemBuilder: (context, index) {
-                  return belongToCommunityItem(
+                  return BelongToCommunityItem(
                     communities: communityList,
                     index: index,
                   );
